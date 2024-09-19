@@ -3,123 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تعلم لغة البرمجة بطريقة ممتعة - Devingo</title>
-    <meta name="description" content="تعلم لغة البرمجة باستخدام تطبيق Devingo بطريقة سهلة وممتعة، مع دروس تفاعلية لجميع المستويات.">
+    <title>Devingo - لتعليم لغات البرمجة</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"> <!-- استيراد خط Cairo -->
     <style>
-        @import url( https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap );
-
         body {
-            font-family: Cairo, sans-serif;
-            background: linear-gradient(135deg, #000000, #ff0000, #0000ff);
             margin: 0;
-            padding: 0;
+            font-family: Cairo, sans-serif;
             text-align: center;
-            color: #f0f0f0;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            padding: 30px;
-        }
-
-        h1 {
-            font-family: Cairo, sans-serif;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #ffcc80;
-        }
-
-        h2 {
-            font-family: Cairo, sans-serif;
-            font-size: 2em;
-            color: #ff8a65;
-        }
-
-        p, ul li {
-            font-family: Roboto, sans-serif;
-            font-size: 1.2em;
-            line-height: 1.8;
-            color: #f0f0f0;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #1e88e5;
-            color: #fff;
-            margin: 10px 0;
-            padding: 12px;
-            border-radius: 8px;
-        }
-
-        .highlight {
-            color: #ffcc80;
-            font-weight: bold;
-        }
-
-        .team-section {
-            margin-top: 40px;
-        }
-
-        .team-section h2 {
-            color: #ff6f61;
-        }
-
-        .team-section p {
-            color: #f0f0f0;
-        }
-
-        .launch-info {
-            margin-top: 40px;
-            background-color: #43a047;
+        .navbar {
+            background-color: #00C3FF; /* لون سماوي */
             color: white;
-            padding: 20px;
-            border-radius: 12px;
-            font-size: 1.4em;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        a {
-            text-decoration: none;
-            color: #ffcc80;
+        .navbar .title {
+            font-size: 20px;
             font-weight: bold;
+            color: #BBFF00; /* لون أخضر فاتح */
+            display: flex;
+            align-items: center;
         }
 
-        a:hover {
-            color: #ff8a65;
+        .navbar .title img {
+            margin-right: 10px; /* مساحة بين الصورة والنص */
+            width: 30px; /* حجم الصورة */
+            height: 30px; /* حجم الصورة */
         }
+
+        .navbar button {
+            background-color: #58CC02; /* لون أخضر */
+            color: white;
+            border: none;
+            padding: 3px 20px;
+            cursor: pointer;
+            border-radius: 9px;
+            font-size: 16px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* ظل صغير */
+            transition: background-color 0.3s;
+        }
+
+        .navbar button:hover {
+            background-color: #45a049; /* لون أخضر أغمق عند التمرير */
+        }
+
+        .main-section {
+            margin-top: 40px;
+        }
+
+        .main-section img {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .main-section h1 {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .main-section button {
+            background-color: #58CC02; /* لون أخضر فاتح */
+            color: white;
+            border: none;
+            padding: 5px 150px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-top: 60px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* ظل صغير */
+            transition: background-color 0.3s;
+        }
+
+        .main-section button:hover {
+            background-color: #45a049; /* لون أخضر أغمق عند التمرير */
+        }
+
+        .info-section {
+            margin-top: 100px; /* زيادة المسافة بين الزر والنص */
+        }
+
+        .info-section h2 {
+            color: #58CC02; /* لون أخضر */
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .info-section p {
+            color: #333;
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        /* إضافة صورة أسفل النص */
+        .additional-image {
+            margin-top: 100px; /* إضافة مسافة كبيرة متناسقة */
+        }
+
+        .additional-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* تعديل حجم النص والعنوان الجديد أسفل الصورة */
+        .additional-text {
+            margin-top: 60px; /* المسافة أسفل الصورة */
+        }
+
+        .additional-text h2 {
+            color: #58CC02; /* نفس اللون الأخضر */
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .additional-text p {
+            color: #333;
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        /* الصورة الجديدة */
+        .new-image-section {
+            margin-top: 100px;
+        }
+
+        .new-image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .ad-free-text {
+            margin-top: 60px;
+        }
+
+        .ad-free-text h2 {
+            color: #58CC02; /* لون العنوان */
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .ad-free-text p {
+            color: #333;
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        /* إضافة قسم جديد للصورة الجديدة والنص */
+        .journey-section {
+            margin-top: 100px;
+        }
+
+        .journey-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .journey-section h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #58CC02;
+        }
+
+        .journey-section p {
+            color: #333;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* قسم الذكاء الاصطناعي */
+        .ai-section {
+            margin-top: 100px;
+        }
+
+        .ai-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .ai-section h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #58CC02;
+        }
+
+        .ai-section p {
+            color: #333;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* النص الجديد */
+        .scroll-text {
+            font-size: 28px; /* حجم كبير */
+            margin-top: 300px;
+            color: #042C60;
+            transition: color 1s; /* تغيير تدريجي للون */
+        }
+
+        /* التأثير عند التمرير */
+        .scroll-text.scrolled {
+            color: #DDF4FF;
+        }
+
+        /* الزر أسفل النص */
+        .scroll-button {
+            margin-top: 20px;
+            padding: 50px 60px;
+            font-size: 20px;
+            background-color: #58CC02;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .scroll-button:hover {
+            background-color: #45a049;
+        }
+
+        .new .title img {
+            margin-right: 10px; /* مساحة بين الصورة والنص */
+            width: 4003px; /* حجم الصورة */
+            height: 3000px; /* حجم الصورة */
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Devingo تطبيق لتعليم لغات البرمجة</h1>
-        <span>هو تطبيق تعليمي مميز يهدف إلى مساعدة الجميع على تعلم لغات البرمجة بطريقة سهلة وتفاعلية.</span>
-        <h4>يوفر التطبيق تجربة تعليمية سلسة، مصممة خصيصًا لتناسب احتياجات <span class="highlight">المبتدئين</span> والمطورين الطموحين الذين يرغبون في تحسين مهاراتهم</h4>
+    <div class="navbar">
+        <div class="title">
+            <img src="https://s5files.mobeasy.com/static/u/1520818/file-1520818-556318.png" alt="Icon">
+            Devingo
+        </div>
+        <button onclick="window.location.href= https://www.appcreator24.com/app3274165-2w53c7 ;">حمل الآن</button>
+    </div>
 
-        <h2>ميزات التطبيق:</h2>
-        <ul>
-            <li>يتضمن التطبيق العديد من الوحدات التعليمية، وكل وحدة تحتوي على 5 دروس</li>
-            <li>جميع الدروس مفتوحة من البداية، مما يمنحك حرية التعلم بالطريقة التي تناسبك</li>
-            <li>يوفر تصميمًا جذابًا وسهل الاستخدام مع أدوات تعليمية فعالة</li>
-        </ul>
-
-        <div class="team-section">
-            <h2>مؤسس ومطور التطبيق:</h2>
-            <h4>تم تطوير التطبيق من قبل <span class="highlight">عمر فاروق محمد</span>، وهو أيضًا المدير التنفيذي والمطور الوحيد للتطبيق</h4>
-
-            <h2>الفريق:</h2>
-            <h4>عدد الفريق: شخص واحد فقط وهو المؤسس والمطور عمر فاروق الذي يدير جميع جوانب التطبيق، بدءًا من البرمجة وصولًا إلى التصميم والإدارة</h4>
+    <div class="main-section">
+        <img src="https://s5files.mobeasy.com/static/u/1520818/file-1520818-605158.png" alt="صورة كبيرة">
+        <h1>الطريقة الأكثر فعّالية لتعلّم لغة برمجة جديدة</h1>
+        <button onclick="window.location.href= https://www.appcreator24.com/app3274165-2w53c7 ;">حمل الآن</button>
+        <p>حمله الان وابدأ رحلتك البرمجية</p>
+        <div class="info-section">
+            <h2>مجاني • مدفوع • بدون اعلانات</h2>
+            <p>تطبيقنا هو تطبيق متخصص في تعليم البرمجة بطريقة سهلة وفعّالة. يقدم التطبيق لك إمكانية تعلم لغة بايثون مجانًا بشكل كامل، مع 100 درسًا مقسمًا بين المبتدئين والمستويات المتقدمة. أما إذا كنت ترغب في تعلم لغات برمجة أخرى فيجب ان تشتري الدورة وبسعر قليل جدا</p>
         </div>
 
-        <div class="launch-info">
-            <span>!سيتم إطلاق التطبيق قريبًا</span>
+        <!-- الصورة الإضافية الأولى -->
+        <div class="additional-image">
+            <img src="https://s5files.mobeasy.com/static/u/1520818/file-1520818-589220.png" alt="صورة إضافية">
+        </div>
+
+<!-- النص الجديد أسفل الصورة -->
+        <div class="additional-text">
+            <h2>تعلم بدون قيود</h2>
+            <p>في تطبيقنا، جميع الدروس متاحة لك بدون أي قيود، حيث يمكنك الوصول إلى أي درس تريده في أي وقت. ومع ذلك، نوصي باتباع تسلسل الدروس بشكل تدريجي، درسًا بعد درس، لضمان فهم أفضل وتطبيق صحيح للمفاهيم. هذه الطريقة تساعدك على بناء معرفتك البرمجية بشكل متسق، مما يسهل عليك تعلم المفاهيم الأكثر تعقيدًا في وقت لاحق.</p>
+        </div>
+
+        <!-- الصورة الجديدة -->
+        <div class="new-image-section">
+            <img src="https://s5files.mobeasy.com/static/u/1520818/file-1520818-343185.png" alt="صورة إضافية جديدة">
+        </div>
+
+        <!-- نص خاص بخلو التطبيق من الإعلانات -->
+        <div class="ad-free-text">
+            <h2>تطبيق خالي تمامًا من الإعلانات</h2>
+            <p>هذا التطبيق مصمم خصيصًا ليكون خاليًا تمامًا من الإعلانات المزعجة، حيث انه يركز على تقديم تجربة تعليمية سلسة ومريحة دون أي تشويش أو إعلانات غير ضرورية. يمكنك التركيز على تعلم البرمجة دون أي مقاطعات.</p>
+        </div>
+
+        <!-- الصورة الجديدة التي طلبتها -->
+        <div class="journey-section">
+            <img src="https://s5files.mobeasy.com/static/u/1520818/file-1520818-679337.png" alt="رحلتك نحو إتقان البرمجة">
+            <h2>رحلتك نحو إتقان البرمجة</h2>
+            <p>في ديفينجو، نؤمن بأن كل خطوة في رحلتك البرمجية تقربك من هدفك. نحن هنا لدعمك بالتحديات والأدوات التي تحتاجها لتطوير مهاراتك بشكل مستمر. اختر مسارك وتقدم خطوة بخطوة حتى تصبح مبرمجًا ماهرًا.</p>
+        </div>
+
+        <!-- قسم الذكاء الاصطناعي -->
+        <div class="ai-section">
+            <img src="https://s5files.mobeasy.com/static/u/1520818/file-1520818-90566.png" alt="التحدث مع الذكاء الاصطناعي">
+            <h2>تحدث مع الذكاء الاصطناعي</h2>
+            <p>الآن، يمكنك التحدث مع الذكاء الاصطناعي في تطبيق ديفينجو! هذه الميزة المتقدمة تتيح لك التفاعل مع الذكاء الاصطناعي للحصول على المساعدة في كتابة الأكواد البرمجية أو استفسارات تقنية. كل ما عليك فعله هو طرح الأسئلة أو تقديم الطلبات، وسيقوم الذكاء الاصطناعي بكتابة الأكواد عنك وتقديم حلول لمشاكلك البرمجية بشكل دقيق وسريع.</p>
+        </div>
+
+        <!-- النص الذي طلبته -->
+        <div class="scroll-text">
+            تعلم البرمجة في أي وقت، وفي أي مكان
+        </div>
+
+        <!-- زر "ابدأ" -->
+        <a href="https://www.appcreator24.com/app3274165-2w53c7" target="_blank">
+            <button class="scroll-button">احصل عليه</button>
+        </a>
+    </div>
+
+    <div class="new">
+        <div class="title">
+            <img src="https://s5files.mobeasy.com/static/u/1520818/file-1520818-524316.png" alt="Icon">
         </div>
     </div>
 
