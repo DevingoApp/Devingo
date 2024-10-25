@@ -16,257 +16,348 @@
     <title>ديفينجو - أفضل تطبيق لتعليم البرمجة - Devingo</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
     <style>
-        body {
-            margin: 0;
-            font-family: Cairo, sans-serif;
-            text-align: center;
-        }
+    body {
+        margin: 0;
+        font-family: Cairo, sans-serif;
+        text-align: center;
+    }
 
-        .navbar {
-            background-color: #00C3FF; /* لون سماوي */
-            color: white;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .navbar {
+        background-color: #00C3FF; /* لون سماوي */
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .navbar .title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #BBFF00; /* لون أخضر فاتح */
-            display: flex;
-            align-items: center;
-        }
+    .navbar .title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #BBFF00; /* لون أخضر فاتح */
+        display: flex;
+        align-items: center;
+    }
 
-        .navbar .title img {
-            margin-right: 10px; /* مساحة بين الصورة والنص */
-            width: 30px; /* حجم الصورة */
-            height: 30px; /* حجم الصورة */
-        }
+    .navbar .title img {
+        margin-right: 10px; /* مساحة بين الصورة والنص */
+        width: 30px; /* حجم الصورة */
+        height: 30px; /* حجم الصورة */
+    }
 
-        .navbar button {
-            background-color: #58CC02; /* لون أخضر */
-            color: white;
-            border: none;
-            padding: 3px 20px;
-            cursor: pointer;
-            border-radius: 9px;
-            font-size: 16px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* ظل صغير */
-            transition: background-color 0.3s;
-        }
-
-        .navbar button:hover {
-            background-color: #45a049; /* لون أخضر أغمق عند التمرير */
-        }
-
-        .main-section {
-            margin-top: 40px;
-        }
-
-        .main-section img {
-            width: 80%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .main-section h1 {
-            margin-top: 50px;
-            font-size: 24px;
-            color: #333;
-        }
-
-        .main-section button {
-            background-color: #58CC02; /* لون أخضر فاتح */
-            color: white;
-            border: none;
-            padding: 5px 150px;
-            cursor: pointer;
-            border-radius: 10px;
-            font-size: 18px;
-            margin-top: 60px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* ظل صغير */
-            transition: background-color 0.3s;
-        }
-
-        .main-section button:hover {
-            background-color: #45a049; /* لون أخضر أغمق عند التمرير */
-        }
-
-        .info-section {
-            margin-top: 100px; /* زيادة المسافة بين الزر والنص */
-        }
-
-        .info-section h2 {
-            color: #58CC02; /* لون أخضر */
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .info-section p {
-            color: #333;
-            font-size: 14px;
-            margin-top: 0;
-        }
-
-        /* إضافة صورة أسفل النص */
-        .additional-image {
-            margin-top: 100px; /* إضافة مسافة كبيرة متناسقة */
-        }
-
-        .additional-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* تعديل حجم النص والعنوان الجديد أسفل الصورة */
-        .additional-text {
-            margin-top: 60px; /* المسافة أسفل الصورة */
-        }
-
-        .additional-text h2 {
-            color: #58CC02; /* نفس اللون الأخضر */
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .additional-text p {
-            color: #333;
-            font-size: 14px;
-            margin-top: 0;
-        }
-
-        /* الصورة الجديدة */
-        .new-image-section {
-            margin-top: 100px;
-        }
-
-        .new-image-section img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .ad-free-text {
-            margin-top: 60px;
-        }
-
-        .ad-free-text h2 {
-            color: #58CC02; /* لون العنوان */
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .ad-free-text p {
-            color: #333;
-            font-size: 14px;
-            margin-top: 0;
-        }
-
-        /* إضافة قسم جديد للصورة الجديدة والنص */
-        .journey-section {
-            margin-top: 100px;
-        }
-
-        .journey-section img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .journey-section h2 {
-            margin-top: 20px;
-            font-size: 24px;
-            color: #58CC02;
-        }
-
-        .journey-section p {
-            color: #333;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-
-        /* قسم الذكاء الاصطناعي */
-        .ai-section {
-            margin-top: 100px;
-        }
-
-        .ai-section img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .ai-section h2 {
-            margin-top: 20px;
-            font-size: 24px;
-            color: #58CC02;
-        }
-
-        .ai-section p {
-            color: #333;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-
-        /* النص الجديد */
-        .scroll-text {
-            font-size: 28px; /* حجم كبير */
-            margin-top: 900px;
-            color: #042C60;
-            transition: color 1s; /* تغيير تدريجي للون */
-        }
-
-        /* التأثير عند التمرير */
-        .scroll-text.scrolled {
-            color: #DDF4FF;
-        }
-
-        /* الزر أسفل النص */
-        .scroll-button {
-            margin-top: 20px;
-            padding: 50px 60px;
-            font-size: 20px;
+        .btn {
+            width: 84%;
+            max-width: 60px;
             background-color: #58CC02;
             color: white;
             border: none;
             border-radius: 10px;
+            padding: 5px 0px;
+            white-space: nowrap;
             cursor: pointer;
-            transition: background-color 0.3s;
+            font-size: 16px;
+            position: relative;
+            box-shadow: 0 4px 0 #58A700;
+            transition: all 0.1s ease;
+            -webkit-tap-highlight-color: transparent;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none; /* إزالة الخط السفلي */
+            margin-top: -1px;
         }
 
-        .scroll-button:hover {
-            background-color: #45a049;
+        .btn:active {
+            box-shadow: 0 0px 0 #58A700;
+            transform: translate(0, 4px);
         }
 
-        /* قسم الحقوق */
-        .footer {
-            background-color: #2FE713; /* لون أخضر فاتح */
-            padding: 10px;
-            color: #333;
-            font-size: 14px;
+        .btn:focus {
+            outline: none; /* إزالة المربع الأزرق عند التركيز */
+        }
+
+    .main-section a {
+            width: 84%;
+            max-width: 330px;
+            background-color: #58CC02;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 8px 0px;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 15px;
+            position: relative;
+            box-shadow: 0 4px 0 #58A700;
+            transition: all 0.1s ease;
+            -webkit-tap-highlight-color: transparent;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             margin-top: 50px;
+            text-decoration: none;
         }
 
-        /* قسم من نحن */
-        .about-section, .privacy-section {
-            margin-top: 100px;
-            text-align: right;
-            padding: 0 20px;
+        .main-section a:hover {
+            background-color: #;
         }
 
-        .about-section h2, .privacy-section h2 {
-            color: #58CC02;
-            font-size: 24px;
+        .main-section a:active {
+            box-shadow: 0 0px 0 #79B933;
+            transform: translate(0, 5px);
         }
 
-        .about-section p, .privacy-section p {
-            color: #333;
-            font-size: 14px;
+        .main-section a:focus {
+            outline: none;
         }
-    </style>
+
+        .main-sectio {
+            display: inline-flex; /* ضمان التصرف كزر */
+            width: 84%;
+            max-width: 330px;
+            background-color: #fff;
+            color: #1CB0F6;
+            border: 2px solid #E5E5E5;
+            border-radius: 12px;
+            padding: 8px 0px;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 15px;
+            position: relative;
+            box-shadow: 0 3px 0 #E5E5E5;
+            transition: all 0.1s ease;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+            -webkit-tap-highlight-color: transparent; /* منع تأثير الضغط */
+            outline: none; /* إزالة التركيز */
+            text-decoration: none; /* إزالة الخط تحت النص */
+        }
+
+        .main-sectio:hover {
+            background-color: #;
+        }
+
+        .main-sectio:active {
+            box-shadow: 0 0px 0 #E5E5E5;
+            transform: translate(0, 3px);
+        }
+
+        .main-sectio:focus {
+            outline: none; /* إزالة المربع الأزرق عند التركيز */
+        }
+
+            .main-secti a {
+            width: 84%;
+            max-width: 330px;
+            background-color: #FF9600;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 8px 0px;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 15px;
+            position: relative;
+            box-shadow: 0 4px 0 #CC7800;
+            transition: all 0.1s ease;
+            -webkit-tap-highlight-color: transparent;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 50px;
+            text-decoration: none;
+        }
+
+        .main-secti a:hover {
+            background-color: #;
+        }
+
+        .main-secti a:active {
+            box-shadow: 0 0px 0 #CC7800;
+            transform: translate(0, 4px);
+        }
+
+        .main-secti a:focus {
+            outline: none;
+        }
+
+    .main-section {
+        margin-top: 40px;
+    }
+
+    .main-section img {
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .main-section h1 {
+        margin-top: 50px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    .info-section {
+        margin-top: 100px; /* زيادة المسافة بين الزر والنص */
+    }
+
+    .info-section h2 {
+        color: #58CC02; /* لون أخضر */
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .info-section p {
+        color: #333;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    /* إضافة صورة أسفل النص */
+    .additional-image {
+        margin-top: 100px; /* إضافة مسافة كبيرة متناسقة */
+    }
+
+    .additional-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* تعديل حجم النص والعنوان الجديد أسفل الصورة */
+    .additional-text {
+        margin-top: 60px; /* المسافة أسفل الصورة */
+    }
+
+    .additional-text h2 {
+        color: #58CC02; /* نفس اللون الأخضر */
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .additional-text p {
+        color: #333;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    /* الصورة الجديدة */
+    .new-image-section {
+        margin-top: 100px;
+    }
+
+    .new-image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .ad-free-text {
+        margin-top: 60px;
+    }
+
+    .ad-free-text h2 {
+        color: #58CC02; /* لون العنوان */
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .ad-free-text p {
+        color: #333;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    /* إضافة قسم جديد للصورة الجديدة والنص */
+    .journey-section {
+        margin-top: 100px;
+    }
+
+    .journey-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .journey-section h2 {
+        margin-top: 20px;
+        font-size: 24px;
+        color: #58CC02;
+    }
+
+    .journey-section p {
+        color: #333;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    /* قسم الذكاء الاصطناعي */
+    .ai-section {
+        margin-top: 100px;
+    }
+
+    .ai-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .ai-section h2 {
+        margin-top: 20px;
+        font-size: 24px;
+        color: #58CC02;
+    }
+
+    .ai-section p {
+        color: #333;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    /* النص الجديد */
+    .scroll-text {
+        font-size: 28px; /* حجم كبير */
+        margin-top: 900px;
+        color: #042C60;
+        transition: color 1s; /* تغيير تدريجي للون */
+    }
+
+    /* التأثير عند التمرير */
+    .scroll-text.scrolled {
+        color: #DDF4FF;
+    }
+
+    /* قسم الحقوق */
+    .footer {
+        background-color: #2FE713; /* لون أخضر فاتح */
+        padding: 10px;
+        color: #333;
+        font-size: 14px;
+        margin-top: 50px;
+    }
+
+    /* قسم من نحن */
+    .about-section, .privacy-section {
+        margin-top: 100px;
+        text-align: right;
+        padding: 0 20px;
+    }
+
+    .about-section h2, .privacy-section h2 {
+        color: #58CC02;
+        font-size: 24px;
+    }
+
+    .about-section p, .privacy-section p {
+        color: #333;
+        font-size: 14px;
+    }
+</style>
 </head>
 <body>
 
@@ -275,16 +366,16 @@
             <img src="https://s5files.mobeasy.com/static/u/1520818/file-1520818-556318.png" alt="Icon">
             Devingo
         </div>
-        <a href="https://www.appcreator24.com/app3274165-2w53c7" target="_blank">
-            <button class="">ابدأ</button>
-        </a>
+        <a href="https://www.example.com" target="_blank" class="btn">ابدأ</a>
     </div>
 
     <div class="main-section">
         <img src="https://s5files.mobeasy.com/static/u/1520818/file-1520818-605158.png" alt="صورة كبيرة">
         <h1>الطريقة الأكثر فعّالية لتعلّم لغة برمجة جديدة</h1>
-        <a href="https://www.appcreator24.com/app3274165-2w53c7" target="_blank">
-            <button class="scroll-button">حمل الان</button>
+        <a href="https://www.appcreator24.com/app3274165-2w53c7" target="_blank" class="main-section button">حملة الان</a>
+    </div>
+        <a href="https://www.appcreator24.com/app3274165-2w53c7" target="_blank" class="main-sectio">أبدا</a>
+    </div>
         </a>
         <p>حمله الان وابدأ رحلتك البرمجية</p>
         <div class="info-section">
@@ -334,9 +425,8 @@
         </div>
 
         <!-- زر "ابدأ" -->
-        <a href="https://www.appcreator24.com/app3274165-2w53c7" target="_blank">
-            <button class="scroll-button">احصل عليه</button>
-        </a>
+        <div class="main-secti">
+        <a href="https://www.example.com" target="_blank" class="main-secti-button">احصل عليه</a>
          <h1>تهانينا</h1>
          <p>بتحميلك للتطبيق فانت قد اتممت خطوتك الاولى نحو تعلم البرمجة</p>
          <p></p>
@@ -384,6 +474,18 @@
     <div class="footer">
         <p>جميع الحقوق محفوظة لدى ديفينجو © 2024</p>
     </div>
-
+<script>
+    // تطبيق التأخير على الروابط
+    document.querySelectorAll('.btn, .main-section.button, .main-sectio, .main-secti-button').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // منع الانتقال الفوري
+            const href = this.getAttribute('href'); // الحصول على الرابط
+            
+            setTimeout(() => {
+                window.open(href, '_blank'); // الانتقال بعد 200 مللي ثانية
+            }, 200); // تأخير 200 مللي ثانية
+        });
+    });
+</script>
 </body>
 </html>
