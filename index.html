@@ -1,4 +1,86 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أيقونة ثابتة</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* تنسيق الأيقونة الثابتة */
+    #comment-icon {
+      position: fixed;
+      bottom: 20px; /* تبقى في الأسفل */
+      right: 20px; /* تبقى في اليمين */
+      z-index: 1000; /* تبقى فوق جميع العناصر */
+    }
+
+    #comment-icon button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      font-size: 24px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    #comment-icon button:hover {
+      background-color: #0056b3;
+    }
+
+    /* تنسيق محتوى الصفحة */
+    #content {
+      margin: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <!-- محتوى الصفحة -->
+    <p>هذا نص تجريبي للتأكد من أن محتوى الصفحة يمر من تحت الأيقونة الثابتة.</p>
+    <p>يمكنك إضافة نصوص أو عناصر أخرى لاختبار التمرير.</p>
+    <p>تمرير المزيد من المحتوى...</p>
+    <p>تمرير المزيد من المحتوى...</p>
+    <p>تمرير المزيد من المحتوى...</p>
+    <p>تمرير المزيد من المحتوى...</p>
+    <p>تمرير المزيد من المحتوى...</p>
+  </div>
+
+  <div id="comment-icon">
+    <!-- عند الضغط يتم فتح الرابط -->
+    <button onclick="openWebsite()">💬</button>
+  </div>
+
+  <script>
+    function openWebsite() {
+      window.open('https://omar-faroogs-team-1.adalo.com/?target=ej6lq30hq9ke7qn7qjqaiw2lt&params=%7B%7D', '_blank');
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
 <html lang="ar">
 <head>
     <link rel="icon" href="S5.png" type="image/png">
